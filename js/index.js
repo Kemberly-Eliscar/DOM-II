@@ -56,7 +56,18 @@ photo[0].addEventListener('mouseover', event => {
 })
 
 // 8. 
-const sectHeadings = document.querySelectorAll (h2);
-sectHeadings[0].addEventListener('mouseover', (event) => {
-    event.target.style.backgroundColor = 'Black'
-})
+const subtitle = document.querySelector('.text-content h2')
+subtitle.addEventListener('focus', event => {
+    event.target.style.background = 'orange';
+});
+//9
+subtitle.addEventListener('blur', event => {
+    event.target.style.background = '';
+});
+
+//10
+const h2 = document.querySelector('.intro h2');
+h2.draggable = 'true';
+h2.addEventListener('dragstart', (event) =>{
+  event.target.style.color = 'orange';
+  });
